@@ -57,3 +57,9 @@ def create_credential(user_name,account_name,password):
     Function that deletes a credential
     '''
     Credentials.delete_credentials(credential)
+
+    def find_credential(account_name):
+    '''
+    Function that credential by account_name and returns credential
+    '''
+    return Credentials.find_by_account_name(account_name)
