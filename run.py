@@ -31,9 +31,17 @@ def create_credential(user_name,account_name,password):
     '''
     new_credential = Credentials(user_name,account_name,password)
     return new_credential
-    
+
     def check_existing_account(account_name):
     '''
     Function that checks if credential exists
     '''
     return Credentials.find_by_account_name(account_name)
+
+    def generate_password(length = 10):
+    '''
+    Function that generates password automatically
+    '''
+    letters = string.ascii_lowercase
+    password_generated = ''.join(random.choice(letters) for i in range(length))
+    return password_generated
