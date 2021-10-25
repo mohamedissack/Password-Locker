@@ -4,7 +4,7 @@ import string  #import string constants
 import pyperclip
 
 class Credentials:
-    
+
     '''
     Class to create  account credentials, generate new passwords and save user information
     '''
@@ -18,4 +18,9 @@ class Credentials:
         self.account_name = account_name
         self.password = password
     
-    
+     def save_credentials(self):
+        '''
+        A method that saves new user object
+        '''
+        Credentials.credential_list.append(self)    
+        
