@@ -17,3 +17,10 @@ def create_user(user_name,password):
     Function to save new user account
     '''
     user.save_user()
+    def verify_user(user_name,password):
+    '''
+    Function that verifies the existing user
+    
+    '''
+    check_user = Credentials.check_user(user_name,password)
+    return check_user
