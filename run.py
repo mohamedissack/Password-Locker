@@ -69,3 +69,10 @@ def create_credential(user_name,account_name,password):
     Function that displays saved credentials
     '''
     return Credentials.display_credentials()
+
+    def copy_credentials(credentials):
+    '''
+    Function that displays saved credentials
+    '''
+    return Credentials.display_credentials()
+
