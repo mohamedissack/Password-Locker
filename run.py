@@ -63,3 +63,9 @@ def create_credential(user_name,account_name,password):
     Function that credential by account_name and returns credential
     '''
     return Credentials.find_by_account_name(account_name)
+
+    def display_credential(credentials):
+    '''
+    Function that displays saved credentials
+    '''
+    return Credentials.display_credentials()
