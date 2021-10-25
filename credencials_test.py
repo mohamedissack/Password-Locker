@@ -72,3 +72,15 @@ def test_display_all_credentials(self):
 
         self.assertEqual(found_credential.account_name,test_credential.account_name)
             
+            def test_credential_exists(self):
+            '''
+            test to check if we can return a Boolean  if we cannot find the credential.
+            '''
+
+            self.new_credential.save_credentials()
+            test_credential = Credentials("Mohamed","Twitter","1234") # new credential
+            test_credential.save_credentials()
+
+            credential_exists = Credentials.credential_exist("Twitter")
+
+            self.assertTrue(credential_exists)
