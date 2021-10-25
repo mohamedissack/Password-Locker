@@ -45,9 +45,15 @@ def create_credential(user_name,account_name,password):
     letters = string.ascii_lowercase
     password_generated = ''.join(random.choice(letters) for i in range(length))
     return password_generated
-    
+
     def save_credentials(credential):
     '''
     Function that saves new credential
     '''
     Credentials.save_credentials(credential)
+
+    def delete_credential(credential):
+    '''
+    Function that deletes a credential
+    '''
+    Credentials.delete_credentials(credential)
