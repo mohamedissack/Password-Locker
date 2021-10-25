@@ -68,3 +68,15 @@ class Credentials:
                 return True
 
         return False
+         @classmethod
+    def display_credentials(cls):
+        '''
+        Method to display the list of credentials saved.
+        '''
+        return cls.credential_list
+
+    @classmethod
+    def copy_credentials(cls, account_name):
+        credential_found = Credentials.find_by_account_name(account_name)
+        pyperclip.copy(credential_found.account_name)
+
