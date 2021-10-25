@@ -59,3 +59,16 @@ def test_display_all_credentials(self):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
         
+        def test_find_credential_by_account_name(self):
+        '''
+        test to check if we can find a credential by account_name and display information
+        '''
+
+        self.new_credential.save_credentials()
+        test_credential = Credentials("Mohamed","Twitter","1234") # new credential
+        test_credential.save_credentials()
+
+        found_credential = Credentials.find_by_account_name("Twitter")
+
+        self.assertEqual(found_credential.account_name,test_credential.account_name)
+            
