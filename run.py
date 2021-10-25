@@ -24,3 +24,10 @@ def create_user(user_name,password):
     '''
     check_user = Credentials.check_user(user_name,password)
     return check_user
+    
+def create_credential(user_name,account_name,password):
+    '''
+    Function that creates new credential
+    '''
+    new_credential = Credentials(user_name,account_name,password)
+    return new_credential
