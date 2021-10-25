@@ -5,7 +5,9 @@
 Password Locker is a python application that helps users generate and store passwords for their personal accounts such as Facebook, Twitter, Gmail, Instagram etc. The Password Locker runs on the terminal and uses short codes to navigate through it. 
 # Project-Setup Instructions.
 1.Open your github account and search for github username: mohamedissack
+
 2 git clone the Password-Locker repository into your local repository 
+
 3.Open your terminal and run the command ./run.py and use the short codes illustrated to operate....
 # BDD
 Behavior   Input   Output
