@@ -18,7 +18,6 @@ class TestCredentials(unittest.TestCase):
         '''
         test_init test case to test if the object is initialized properly
         '''
-
         self.assertEqual(self.new_credential.user_name,"Mohamed")
         self.assertEqual(self.new_credential.account_name,"Twitter")
         self.assertEqual(self.new_credential.password,"1234")
@@ -42,7 +41,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.delete_credentials()# Deleting a credential object
         self.assertEqual(len(Credentials.credential_list),4)
     
-     def test_save_multiple_credential(self):
+    def test_save_multiple_credential(self):
             '''
             test_save_multiple_credential to check if we can save multiple credentials
             objects to our credential_list
@@ -52,14 +51,14 @@ class TestCredentials(unittest.TestCase):
             test_credential.save_credentials()
             self.assertEqual(len(Credentials.credential_list),9)
 
-def test_display_all_credentials(self):
+    def test_display_all_credentials(self):
         '''
         method that returns a list of all credentials saved
         '''
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
         
-        def test_find_credential_by_account_name(self):
+    def test_find_credential_by_account_name(self):
         '''
         test to check if we can find a credential by account_name and display information
         '''
@@ -72,7 +71,7 @@ def test_display_all_credentials(self):
 
         self.assertEqual(found_credential.account_name,test_credential.account_name)
             
-            def test_credential_exists(self):
+    def test_credential_exists(self):
             '''
             test to check if we can return a Boolean  if we cannot find the credential.
             '''
@@ -85,7 +84,7 @@ def test_display_all_credentials(self):
 
             self.assertTrue(credential_exists)
 
-            def test_copy_account_name(self):
+    def test_copy_account_name(self):
         '''
         Test to confirm that we are copying the account_name from a found credential
         '''
